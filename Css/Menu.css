@@ -1,0 +1,135 @@
+/* Var */
+
+:root {
+  --primary: #ff6b35;
+  --secondary: #1f1f1f;
+  --accent: #f7c59f;
+  --bg: #f8f9fa;
+  --text: #ffffff;
+  --muted: #bfbfbf;
+}
+
+/* Nav */
+
+.nav-title {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.basket-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.back-link {
+  margin-right: 1.5rem;
+  color: var(--primary);
+  margin-top: 0.49rem;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.back-link:hover {
+  color: var(--secondary);
+}
+
+/* food-sec */
+
+.food-sec {
+  margin: 1.5rem;
+  max-width: 150rem;
+  padding: 1.5rem;
+  margin: 0 auto;
+  margin-top: 3.5rem;
+}
+
+.food-card {
+  background: var(--secondary);
+  padding: 1.2rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  margin-bottom: 3rem;
+}
+
+.food-card:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+}
+
+.food-img {
+  border-radius: 5px;
+}
+
+.food-title {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.food-p {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  padding: 0 1rem;
+}
+
+.food-price-star {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-btn {
+  margin-top: 1.75rem;
+  background: var(--primary);
+  display: block;
+  color: var(--secondary);
+  border: 2px var(--primary) solid;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.food-btn:hover {
+  background: transparent;
+  color: var(--text);
+}
+
+.food-btn:active {
+  color: var(--muted);
+}
+
+.food-star {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+@media screen and (min-width: 632px) {
+  .food-sec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .food-card {
+    flex: 0 0 46%;
+  }
+}
+
+@media screen and (min-width: 1070px) {
+  .food-card {
+    flex: 0 0 30%;
+  }
+}

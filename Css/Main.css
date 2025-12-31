@@ -1,0 +1,415 @@
+/* ---- Font's ---- */
+
+@font-face {
+  font-family: "Geom";
+  src: url(../Fonts/Geom-VariableFont_wght.ttf);
+}
+
+/* ---- Variable's ---- */
+
+:root {
+  --primary: #ff6b35;
+  --secondary: #2f2f2f;
+  --accent: #f7c59f;
+  --bg: #f8f9fa;
+  --text: #212529;
+}
+
+body {
+  color: var(--text);
+  font-size: 1.5rem;
+  font-family: "Geom";
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+/* ---- Navbar ---- */
+
+.nav-sec {
+  display: flex;
+  justify-content: space-between;
+  background: var(--bg);
+  width: 100%;
+  height: 3rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  position: fixed;
+  border-radius: 4px;
+  top: 0;
+  z-index: 2;
+}
+
+.nav-title {
+  margin-left: 1rem;
+  align-content: center;
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.title {
+  color: var(--primary);
+}
+
+.bar {
+  display: block;
+  position: fixed;
+  background: var(--bg);
+  width: 100%;
+  padding: 3.9rem 0.5rem 1rem 1rem;
+  transition: all 0.5s ease;
+  transform: translateY(-100%);
+}
+
+.show-bar {
+  transform: translateY(0);
+}
+
+.bar-link {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: var(--primary);
+  background: var(--bg);
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.bar-link:hover {
+  color: var(--secondary);
+  background: var(--primary);
+}
+
+.nav-icon {
+  justify-self: end;
+  align-self: center;
+  margin-right: 1rem;
+  cursor: pointer;
+  color: var(--primary);
+  transition: all 0.25s ease;
+}
+
+.nav-icon:hover {
+  color: var(--text);
+}
+
+.nav-links {
+  display: none;
+}
+
+#nav-close {
+  color: black;
+  border: red 2px solid;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+#nav-close:hover {
+  background: lightcoral;
+}
+
+#nav-close:active {
+  color: black;
+  background: transparent;
+  color: red;
+}
+
+/* ---- Header ---- */
+
+.hero {
+  margin-top: 1.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6)),
+    url(../Img/Hero-img.jpg) center/cover no-repeat;
+}
+
+.hero-text {
+  height: 100vh;
+  align-content: center;
+  text-align: center;
+  justify-items: center;
+  padding: 2rem;
+  color: var(--accent);
+  max-width: 1170px;
+  margin: auto;
+}
+
+.hero-text h1 {
+  font-size: 1.2rem;
+}
+
+.hero-text p {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: var(--bg);
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: var(--bg);
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: var(--primary);
+  border: var(--primary) solid 2px;
+  transition: all 0.5s ease;
+}
+
+.hero-btn:hover {
+  color: var(--primary);
+  background: transparent;
+  border: var(--primary) solid 2px;
+}
+
+@media screen and (min-width: 770px) {
+  .nav-icon {
+    display: none;
+  }
+
+  .nav-title {
+    display: block;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    max-width: 80%;
+    margin: 3.5rem auto;
+    font-size: 1.25rem;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  .nav-link {
+    margin-right: 2rem;
+    font-size: 1.25rem;
+    color: var(--primary);
+    transition: all 0.25s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--text);
+  }
+}
+
+/* ---- Menu ---- */
+
+.menu-sec {
+  margin-top: 2rem;
+}
+
+.menu-title {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.menu {
+  margin-top: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.menu-img {
+  width: 100%;
+  -o-object-fit: center;
+  object-fit: center;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+
+.menu-img:hover {
+  box-shadow: 0 0 5px black;
+}
+
+.menu-select a {
+  display: block;
+}
+
+.menu-text {
+  margin-top: 0.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.menu-select:hover .menu-text {
+  color: var(--primary);
+}
+
+.menu-select:active .menu-text {
+  color: var(--accent);
+}
+
+@media screen and (min-width: 770px) {
+  .menu-select {
+    flex: 0 0 45%;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .menu-select {
+    flex: 0 0 25%;
+  }
+}
+
+/* ---- Services ---- */
+
+.services {
+  margin-top: 4rem;
+}
+
+.service-span {
+  color: var(--primary);
+}
+
+.service-title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  background: var(--secondary);
+  color: var(--accent);
+  border-radius: 20px;
+  margin: 3rem;
+  transition: all 0.3s ease;
+}
+
+.service-container {
+  padding: 2rem;
+}
+
+.icon-wrapper {
+  padding: 3rem;
+  text-align: center;
+}
+
+.service-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.service-h {
+  text-align: center;
+
+  margin-bottom: 2.5rem;
+}
+
+.service-p {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.service-cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.service-card:hover {
+  background: var(--primary);
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px black;
+  color: var(--text);
+}
+
+/* ---- About  ---- */
+
+.about {
+  margin-top: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6)),
+    url(../Img/About-img.jpg) center;
+}
+
+.about-text {
+  text-align: center;
+  font-size: 2rem;
+  padding-top: 2rem;
+  color: var(--bg);
+}
+
+.about-text span {
+  color: var(--primary);
+}
+
+.about-sec {
+  text-align: center;
+  padding: 2rem;
+}
+
+.about-sec p {
+  line-height: 2.5rem;
+  color: var(--secondary);
+  color: var(--bg);
+  font-size: 1rem;
+}
+
+/* ---- Footer  ---- */
+
+.footer-icons {
+  text-align: center;
+  padding: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.footer-icon {
+  color: var(--text);
+  transition: all 0.25s ease;
+}
+
+.footer-icon:hover {
+  color: var(--primary);
+}
+
+.footer-text {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+/* -------- */
