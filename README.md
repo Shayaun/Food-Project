@@ -1,7 +1,6 @@
-# Project Preview Guide
+## 🔍 Project Preview
 
-To view this project:
+You can view this project in one of the following ways:
 
-1. Open the link in the **About** section  
-   **or**
-2. **Clone** or **Download** the project and open the `index.html` file
+- Open the link available in the **About** section  
+- Or clone/download the repository and open `index.html` in your browser
