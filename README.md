@@ -15,7 +15,6 @@ The project is created for practicing **core frontend concepts**.
 
 - Works well on **mobile**, **tablet**, and **desktop**
 - Simple responsive layout using **pure CSS**
-- Suitable for a **beginner / junior portfolio project**
 
 ## ▶️ How to Run
 
